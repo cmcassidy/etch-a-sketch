@@ -1,5 +1,5 @@
-var wide = 16;
-var tall = 16;
+var wide = 32;
+var tall = 32;
 
 $(document).ready(function() { 
     makeGrid(wide, tall);

@@ -6,5 +6,10 @@
 
 .box {
     display: inline-block;
+    background-color: grey;
+    vertical-align: top;
+}
+
+.box:hover {
     background-color: black;
 }
