@@ -1,24 +1,36 @@
-var wide = 32;
-var tall = 32;
+var wide = 150;
 
 $(document).ready(function() { 
-    makeGrid(wide, tall);
+    makeGrid(wide); 
+    $('body').on('mousedown mouseup', function mouseState(e) {
+        if (e.type == "mousedown") {
+            $(".box").mouseenter(function() {
+                $(this).css("background-color", "black");
+            });
+        } else {
+            $(".box").unbind('mouseenter mouseleave');
+        }
+   });
 });
 
-var makeGrid = function(wide, tall) {
+var makeGrid = function(wide) {
+    var boxSide = calculateBoxSide(wide);
+    var boxRowNumber = calculateRowNumbers(boxSide);
+    var boxSideLength = boxSide + "px";
+    $("body").css("line-height", boxSideLength);
     for (i=0; i<wide; i++) {
-        for (j=0; j<tall; j++) {
+        for (j=0; j<boxRowNumber; j++) {
             $box = $('<div class="box">').appendTo(".sketchpad")
-            $box.css("width", calculateBoxWidth(wide));
-            $box.css("height", calculateBoxHeight(tall));
+            $box.css("width", boxSideLength);
+            $box.css("height", boxSideLength);
         }
     }
 }
     
-var calculateBoxWidth = function(wide) {
-    return ($(".sketchpad").width()/wide + "px");
+var calculateBoxSide = function(wide) {
+    return $(".sketchpad").width()/wide;
 }
 
-var calculateBoxHeight = function(tall) {
-    return ($(".sketchpad").height()/tall + "px");
+var calculateRowNumbers = function(boxSideLength) {
+    return Math.round($(".sketchpad").height()/boxSideLength);
 }

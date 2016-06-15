@@ -1,7 +1,9 @@
+
 .sketchpad {
-    width: 320px;
-    height: 320px;
     margin: 0 auto;
+    width: 50%;
+    height: 500px;
+    text-align: center;
 }
 
 .box {
