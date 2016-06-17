@@ -1,17 +1,50 @@
+.container {
+  margin: 50px auto;
+  width: 50%;
+  text-align: center;
+}
 
-.sketchpad {
-    margin: 0 auto;
-    width: 50%;
+h1 {
+    font-size: 4em;
+    font-family: 'Prompt', sans-serif;
+    color: #585858;
+}
+
+#sketchpad {
+    margin: 50px;
     height: 500px;
-    text-align: center;
+    border: 100px;
 }
 
 .box {
     display: inline-block;
-    background-color: grey;
+    vertical-align: top; 
+    background-color: #909090;
+}
+
+.control-panel {
+    width: 100%;
+    display: inline-block;
+    margin: 50px auto;
     vertical-align: top;
 }
 
-.box:hover {
-    background-color: black;
+button {
+    font-size: 1em;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+}
+
+.main {
+    margin: 0 auto;
+    width: 50%;
+    float: clear;
+}
+
+#minus {
+    float: left;
+}
+
+#plus {
+    float: right;
 }
