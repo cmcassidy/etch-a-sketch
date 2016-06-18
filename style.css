@@ -24,7 +24,6 @@ h1 {
 
 .control-panel {
     width: 100%;
-    display: inline-block;
     margin: 50px auto;
     vertical-align: top;
 }
@@ -38,13 +37,24 @@ button {
 .main {
     margin: 0 auto;
     width: 50%;
-    float: clear;
 }
 
-#minus {
+.draw {
+    width: 50%;
     float: left;
 }
 
-#plus {
+.erase {
+    width: 50%;
     float: right;
+}
+
+#minus {
+    position: absolute;
+    left: 25%;
+}
+
+#plus {
+    position: absolute;
+    right: 25%;
 }

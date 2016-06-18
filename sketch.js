@@ -36,14 +36,13 @@ var toggleBrush = function(color) {
     });
 }
 
+// Not fully implemented
 var togglePrecise = function() {
-        $('body').on('mousedown mouseup', function mouseState(e) {
+    $('body').on('mousedown mouseup', function mouseState(e) {
         if (e.type == "mousedown") {
             $(".box").mouseenter(function() {
-                $(this).css("background-color", "green");
+                $(this).css("background-color", color);
             });
-        } else {
-            $(".box").unbind('mouseenter mouseleave');
         }
     });
 }
